@@ -16,7 +16,21 @@ ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten',
 values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8, 
             'Nine':9, 'Ten':10, 'Jack':10, 'Queen':10, 'King':10, 'Ace':11}
 
-#Classes needed
+
+##custom functions
+import os
+
+#custom print function
+def printbb(incoming,clear_console=False):
+    if clear_console == True:
+        clear = lambda: os.system('clear')
+        clear()
+
+    print(incoming)
+
+
+
+##Classes needed
 # card 
 # deck
 # player
@@ -90,21 +104,6 @@ class Player:
             return card.value + x
         return reduce(add_values , self.all_cards, 0) 
         
-
-# from ctypes import pointer
-# from ssl import Purpose
-# from tkinter import Y
-# from unicodedata import name
-import os
-
-#custom print function
-def printbb(incoming,clear_console=False):
-    if clear_console == True:
-        clear = lambda: os.system('clear')
-        clear()
-
-    print(incoming)
-
 
 class Game:
 
@@ -335,6 +334,7 @@ class Game:
 
                 
 
-
+#create the game, and provide necessary information
 new_game = Game("black jack", 5)
+#call the game method for blackjack
 new_game.blackjack()
