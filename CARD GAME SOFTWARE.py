@@ -4,8 +4,6 @@
 
 
 
-
-
 #stuff we need to import
 import random
 import functools
@@ -297,40 +295,6 @@ class Game:
                     printbb("{} and the Dealer draw the hand, only the ante is not recovered".format(player_two.name))
                     player_two.purse = player_two.purse - self.ante
                     current_round = False
-
-                
-                ###COMMENTED OLD WIN COMPARISON
-                # if player_two.hand_total() > player_one.hand_total():
-                #     #the user beats the dealer
-                #     printbb("The Dealer has {} and you have {}".format(player_one.hand_total(),player_two.hand_total()))
-                #     printbb("{} wins the hand".format(player_two.name))
-                #     printbb("{} wins {}. \n".format(player_two.name,the_pot))
-
-                #     #add the pot to the user's total purse and display it
-                #     player_two.purse = player_two.purse + the_pot
-                #     printbb("{} has {}.".format(player_two.name, player_two.purse))
-                #     current_round = False
-                #     break
-
-                # elif player_one.hand_total() > player_two.hand_total():
-                #     #the dealer beats the user
-                #     printbb("The Dealer has {} and you have {}".format(player_one.hand_total(),player_two.hand_total()))
-                #     printbb("{} wins the hand".format(player_one.name))
-                #     printbb("{} wins {}. \n".format(player_one.name,the_pot))
-
-                #     #subtract the pot from the Players purse
-                #     player_two.purse = player_two.purse - the_pot
-                #     #reset the_pot to zero
-                #     the_pot = 0
-                #     printbb("The {} clears the board. You have lost {}.".format(player_one.name, the_pot))
-                #     current_round = False
-                #     break
-
-                # else:   
-                #     the_pot = 0
-                #     printbb("The hand is a draw")
-
-
 
                 
 
