@@ -297,6 +297,7 @@ class Game:
                     current_round = False
 
                 
+                
 
 #create the game, and provide necessary information
 new_game = Game("black jack", 5)
